@@ -16,6 +16,10 @@ app.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, 'httpdocs/index.html'));
 });
 
++app.get('/*', function (req, res) {
+    res.sendFile(path.join(__dirname, './build', 'index.html'));
+});
+
 app.listen(port, () => {
     console.log("Server started and listening to ::" + port);
 });
