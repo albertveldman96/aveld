@@ -19,3 +19,5 @@ yarn-error.log*
 # user specific files
 \.idea/workspace\.xml
 \.idea/tasks\.xml
+
+\.idea/watcherTasks\.xml
