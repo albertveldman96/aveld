@@ -16,5 +16,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-
+# user specific files
 \.idea/workspace\.xml
+\.idea/tasks\.xml
+
+# css
+/src/**/*.css
