@@ -1,8 +1,7 @@
 const initialState = {
-    status: "none",
+    status: null,
     weather: null
 };
-
 
 const weather = (state = initialState, action) => {
     switch(action.type) {

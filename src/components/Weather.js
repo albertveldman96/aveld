@@ -9,17 +9,8 @@ const Weather = ({ weather, status }) => (
                 yData={weather.temps}
                 type="scatter"
             />
-        ) : null}
+        ) : ''}
     </div>
 );
-
-// Weather.propTypes = {
-//     weather: PropTypes.arrayOf(PropTypes.shape({
-//         temps: PropTypes.array.isRequired,
-//         dates: PropTypes.array.isRequired
-//     }).isRequired
-//     ).isRequired,
-//     status: PropTypes.string.isRequired
-// };
 
 export default Weather;

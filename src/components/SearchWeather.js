@@ -35,8 +35,4 @@ class SearchWeather extends Component {
     }
 }
 
-// SearchWeather.propTypes = {
-//     getWeather: PropTypes.func.isRequired
-// };
-
 export default SearchWeather;
