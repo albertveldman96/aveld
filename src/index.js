@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import App from './components/App';
@@ -15,9 +15,12 @@ if (process.env.NODE_ENV !== "production") {
         console.log("REDUX DEVTOOLS: Not found, no connector installed on Redux Store.");
     }
 }
+const middleware = applyMiddleware(thunk);
 
-const store = createStore(reducer,applyMiddleware(thunk), reduxDevToolConnector);
-
+const store = createStore(
+    reducer,
+    compose(middleware, reduxDevToolConnector)
+);
 
 render(
     <Provider store={store}>
