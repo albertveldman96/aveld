@@ -21,3 +21,5 @@ yarn-error.log*
 \.idea/tasks\.xml
 
 \.idea/watcherTasks\.xml
+
+src/secrets\.js
