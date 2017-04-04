@@ -2,8 +2,10 @@ import React from 'react';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import thunk from 'redux-thunk';
-import App from './components/App';
+import WeatherApp from './components/WeatherApp';
+import WeightApp from './components/WeightApp';
 import reducer from './reducers';
 import './styles.css';
 
@@ -24,7 +26,12 @@ if (process.env.NODE_ENV !== "production" && window.__REDUX_DEVTOOLS_EXTENSION__
 
 render(
     <Provider store={store}>
-        <App/>
+        <Router>
+            <div>
+                <Route path="/playground/weather" component={WeatherApp}/>
+                <Route path="/playground/weight" component={WeightApp}/>
+            </div>
+        </Router>
     </Provider>,
   document.getElementById('root')
 );

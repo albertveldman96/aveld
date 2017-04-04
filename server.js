@@ -4,7 +4,6 @@ const path = require('path');
 const app = express();
 
 const port = process.env.PORT || 3000;
-
 app.use('/api/v1', require('./api').api);
 
 app.route("/static/*")
@@ -12,7 +11,7 @@ app.route("/static/*")
         res.sendFile(path.join(__dirname, "build", req.path));
     });
 
-app.route("/playground")
+app.route("/playground/*")
     .get((req, res) => {
         res.sendFile(path.join(__dirname, "build/index.html"));
     });
