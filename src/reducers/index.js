@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
 import weather from './weather';
+import weight from './weight';
 
-const weatherApp = combineReducers({
-    weather
+const reducer = combineReducers({
+    weather,
+    weight
 });
 
-export default weatherApp;
+export default reducer;
