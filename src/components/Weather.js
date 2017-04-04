@@ -1,10 +1,10 @@
 import React from 'react';
-import Plot from './Plot';
+import WeatherPlot from './WeatherPlot';
 
 const Weather = ({ weather, status }) => (
     <div className="wrapper">
         {(status === 'succeeded') ? (
-            <Plot
+            <WeatherPlot
                 xData={weather.dates}
                 yData={weather.temps}
                 type="scatter"
