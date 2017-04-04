@@ -1,10 +1,10 @@
 import React from 'react';
-import WeatherPlot from './WeatherPlot';
+import WeightPlot from './WeightPlot';
 
 const Weight = ({ weights, status }) => (
     <div className="wrapper">
         {(status === 'succeeded') ? (
-            <WeatherPlot
+            <WeightPlot
                 xData={weights.dates}
                 yData={weights.weights}
                 type="scatter"

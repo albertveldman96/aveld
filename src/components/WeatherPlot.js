@@ -12,8 +12,12 @@ class WeatherPlot extends Component {
                 t: 0, r: 0, l:30
             },
             xaxis: {
-                gridcolor: 'transparant'
-            }
+                title: 'Datum'
+            },
+            yaxis: {
+                title: 'Temperatuur °C'
+            },
+            hovermode: 'closest'
         }, {
             displayModeBar: false
         });
